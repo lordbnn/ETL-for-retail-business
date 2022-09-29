@@ -1,9 +1,5 @@
-# Pipeline-with-postgres-and-s3
+# ETL with AWS and PostgreSQL
 Data2bots Technical assessment
-# Data Engineering – Moving Big Data  
-© Explore Data Science Academy
-
-## Predict instructions
 
 
 #### Table of contents 
