@@ -91,20 +91,11 @@ At its completion, the formed data pipeline exhibits the following functionality
    | SSH | TCP | 22 | My IP  | 
 
    <br>
-
-  
-   | Type | Protocol | Port Range | Destination | 
-   | ---- | -------- | ---------- | ------ |
-   | All TCP | TCP | 0 - 65535 | "Anywhere - IPv4. 0.0.0.0/0"  | 
-   | All TCP | TCP | 0 - 65535 | "Anywhere - IPv6. ::/0"  | 
-
-
- - **IAM role policies**
       
-      | Policies | Trust Relationships |
-      | -------- | ------------------- |
-      | AmazonS3FullAccess         | |
-      | AmazonEC2FullAccess        | elasticmapreduce.amazonaws.com|
+   | Policies | Trust Relationships |
+   | -------- | ------------------- |
+   | AmazonS3FullAccess         | |
+   | AmazonEC2FullAccess        | elasticmapreduce.amazonaws.com|
       
 
 
