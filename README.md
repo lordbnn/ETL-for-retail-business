@@ -122,9 +122,7 @@ The stock data required for the predict is currently located in a public s3 buck
     | Instance type           | `t2.micro` |
     | VPC                   | default |  
     | Storage                   | 8GB SSD Volume |  
-    | Tag-based name     | ex. "Name: byroneji4734-databots" | 
-    | Security Group        | \<Newly created security group\> |  
-    | Security key | ex. "byroneji4734-keypair" |
+
 
 
    - Instance dependencies:
