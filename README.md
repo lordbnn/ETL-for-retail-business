@@ -26,23 +26,23 @@ Data2bots Technical assessment
      <em>Figure 1: A representation of the completed pipeline.</em>
 </p>
 
-As part of this migration, raw data, given in the form of orders, reviews, and shipments `csv` snapshot batches gathered by the on-premise application, needs to be moved to the datawarehouse and analyzed. As an initial effort in this movement of data, ABC company have homed in on the trading data of thousands of records over the past seven years, and will only require a subset of the raw data to be migrated and analyzed to the cloud in a batch-wise manner.  
+Raw data, given in the form of orders, reviews, and shipments `csv` snapshots gathered by my client needs to be moved to the data warehouse and analyzed. As an initial effort in this movement of data, ABC company has homed in on the transactional data of thousands of records over the past seven years and requires them to be migrated and analyzed to the cloud in an automated manner.  
 
-With the above requirements, my role as a data engineer is to create a robust data pipeline that can extract, transform, and load the `csv` datasets from the source data system to a SQL-based database. The final pipeline will be built in [AWS Data Pipeline](https://aws.amazon.com/datapipeline/) and would utilise AWS services as its functional components. 
+With the above requirements, my role as a data engineer is to create a robust data pipeline that can extract, transform, and load the `csv` datasets from the source data system to a SQL-based database, saving a back up of the analysis details as CSV in a data lake.
 
 ### Functional requirements of the data pipeline
 [Back to top](#table-of-contents)
 
-At its completion, the formed data pipeline exhibits the following functionality: 
+The formed data pipeline exhibits the following functionality: 
 
  - **Pipeline input:** The pipeline is capable of *ingesting and processing 3 `csv` files* per workflow run.
  - **Pipeline output:** The raw data is *stored within a PostgreSQL staging DB schema * and the resulting processed data in a postgreSQL analytics DB schema.   
  - **Monitoring:** The pipeline provides an *email-based success or failure notification* following an attempted run.  
- - **Automation:** The pipeline is *event-driven*, triggering upon a file change in a monitored Amazon S3 bucket. The pipeline will not be invoked more than once per day. 
- - **Scaling:** There are no scaling requirements for the pipeline, and there is no need to make assumptions about concurrent runs or the size of the input batch increasing. 
+ - **Automation:** The pipeline is *event-driven*, triggering based on a specific time. The pipeline will not be invoked more than once per day. 
 
 
-## Part-I: Configure pipeline layers 
+
+## Part-I: Configuration of layers
 
 ### Component overview
 [Back to top](#table-of-contents)
