@@ -7,7 +7,7 @@ Data2bots Technical assessment
    - [Table of contents](#table-of-contents)
   - [overview](#overview)
     - [Functional requirements of the data pipeline](#functional-requirements-of-the-data-pipeline)
-  - [Why containerized lambda?](#why-containerized-lambda-?)
+  - [Why containerized lambda?](#why-containerized-lambda?)
   - [Components and Pricing](#Components-and-Pricing)
 
 
