@@ -1,4 +1,4 @@
-# ETL with AWS and PostgreSQL
+# EVENT BASED ETL WITH AWS LAMBDA CONTAINER IMAGE
 Data2bots Technical assessment
 
 
