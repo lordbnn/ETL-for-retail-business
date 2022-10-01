@@ -58,11 +58,15 @@ The container image bolsters the agility of the lambda function by being able to
 
    <br>
 
-    | Major components | Appx cost | 
-    | :--------------- | :---------| 
-    | AWS ECR       | $0.10/GB/Month | 
-    | AWS SNS           |$2/100k notifications |
-    | AWS EventBridge                   | $1.00/million custom events published |  
-    | AWS Lambda                   |$0.0000063/day|  
+ | Major components | Appx cost | 
+ | :--------------- | :---------| 
+ | AWS ECR       | $0.10/GB/Month | 
+ | AWS SNS           |$2/100k notifications |
+ | AWS EventBridge                   | $1.00/million custom events published |  
+ | AWS Lambda                   |$0.0000063/day|  
+
+
+
+
 
 
