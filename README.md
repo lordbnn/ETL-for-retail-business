@@ -26,9 +26,9 @@ Data2bots Technical assessment
      <em>Figure 1: A representation of the completed pipeline.</em>
 </p>
 
-Raw data, given in the form of orders, reviews, and shipments `csv` snapshots gathered by my client needs to be moved to the data warehouse and analyzed. As an initial effort in this movement of data, ABC company has homed in on the transactional data of thousands of records over the past seven years and requires them to be migrated and analyzed to the cloud in an automated manner.  
+Raw data, given in the form of orders, reviews, and shipments `csv` snapshots gathered by my client. requires to be moved to the data warehouse and analyzed. As an initial effort in this movement of data, ABC company has homed in on the transactional data of thousands of records over the past seven years and requires them to be migrated and analyzed to the cloud in an automated manner.  
 
-With the above requirements, my role as a data engineer is to create a robust data pipeline that can extract, transform, and load the `csv` datasets from the source data system to a SQL-based database, saving a back up of the analysis details as CSV in a data lake.
+With the above requirements, my role as the sole data engineer is to create a robust data pipeline that can extract, transform, and load the `csv` datasets from the source data system to a SQL-based database, saving a back up of the analytics details as CSV in a data lake.
 
 ### Functional requirements of the data pipeline
 [Back to top](#table-of-contents)
