@@ -48,7 +48,7 @@ At its completion, the formed data pipeline exhibits the following functionality
 [Back to top](#table-of-contents)
 
 <p align='center'>
-     <img src="figs/pipeline-components.jpg"
+     <img src="architecture.png"
      alt='Figure 2: Individual pipeline components'
      width=800px/>
      <br>
