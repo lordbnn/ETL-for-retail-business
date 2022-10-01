@@ -10,6 +10,9 @@ Data2bots Technical assessment
   - [Why containerized lambda?](#why-containerized-lambda)
   - [Components and Pricing](#Components-and-Pricing)
   - [The ETL process](#The-ETL-process)
+      - [Loading the data](#Loading-the-data)
+      - [Transforming the data](#Transforming-the-data)
+  - [Checklist](#Loading-the-data)
 
 
 ## Overview
@@ -71,7 +74,37 @@ The container image bolsters the agility of the lambda function by being able to
 ## The ETL process
 [Back to top](#table-of-contents)
 
-### Loading data
+### Loading the data
+All data loading was done with with Python, using boto3 to connect to the S3 bucket
+
+### Transforming the data
+All transformation was done in SQL, then converted to a dataframe through Python to enable ease loading into their respective PostgreSQL tables
+
+### Challenges
+- DataType errors:
+      Null values in SQL are represented by the DataType `Null`, however, pandas converts this to 'NaN', a datatype not recognized by postgreSQL, hence 
+      While loading `shipment_deliveries` data into the postgresQL table it resulted into an error due 'Nan' values in the expected empty cells, the `NaN` value was       percieved as a string in SQL which made it alien to the date DataType declared in the `delivery_date` and `shipment_date` columns.
+      
+   This was resolved by substituting the `NaN` values in the dataframe with a 'weird' date (`1000-01-01`), then using SQL to replace them into `Null` values while      in the SQL table.
+   
+- Lambda function:
+      I chose Lambda function and event trigger with SNS to be the major components of the pipeline in other to make a robust, yet simple cost effective, however, the dependencies for the function to run efficiently was above lambda's limit by 200mb, hence I resulted into using a lambda container image process to build the pipeline.
+      
+ 
+ 
+## Checklist
+[Back to top](#table-of-contents)
+
+The following is a checklist of all components associated with this project: 
+
+ - [ ] Lambda function
+ - [ ] Amazon ECR
+ - [ ] Amazon EventBridge
+ - [ ] Amazon SNS
+ - [ ] Docker
+ - [ ] EC2 - to setup my Docker environment in Ubuntu
+ - [ ] AWS CLI     
+
 
 
 
