@@ -9,6 +9,7 @@ Data2bots Technical assessment
     - [Functional requirements of the data pipeline](#functional-requirements-of-the-data-pipeline)
   - [Why containerized lambda?](#why-containerized-lambda)
   - [Components and Pricing](#Components-and-Pricing)
+  - [The ETL process](#The-ETL-process)
 
 
 ## Overview
@@ -66,6 +67,11 @@ The container image bolsters the agility of the lambda function by being able to
  | AWS Lambda                   |$0.0000063/day|  
 
 
+
+## The ETL process
+[Back to top](#table-of-contents)
+
+### Loading data
 
 
 
