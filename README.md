@@ -36,7 +36,7 @@ With the above requirements, my role as the sole data engineer is to create a ro
 
 The formed data pipeline exhibits the following functionality: 
 
- - **Pipeline input:** The pipeline is capable of *ingesting and processing 3 `csv` files* per workflow run.
+ - **Pipeline input:** The pipeline is capable of *ingesting and processing multiple `csv` files* per workflow run.
  - **Pipeline output:** The raw data is *stored within a PostgreSQL staging DB schema * and the resulting processed data in a postgreSQL analytics DB schema.   
  - **Monitoring:** The pipeline provides an *email-based success or failure notification* following an attempted run.  
  - **Automation:** The pipeline is *event-driven*, triggering upon a file change. The pipeline will not be invoked more than once per day. 
