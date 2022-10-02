@@ -12,6 +12,7 @@ Data2bots Technical assessment
   - [The ETL process](#The-ETL-process)
       - [Loading the data](#Loading-the-data)
       - [Transforming the data](#Transforming-the-data)
+      - [Automation](#automation)
   - [Checklist](#Loading-the-data)
 
 
