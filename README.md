@@ -67,7 +67,7 @@ The container image bolsters the agility of the lambda function by being able to
  | :--------------- | :---------| 
  | AWS ECR       | $0.10/GB/Month | 
  | AWS SNS           |$2/100k notifications |
- | AWS EventBridge                   | $1.00/million custom events published |  
+ | AWS Cloudwatch                   | $0.30/10k metrics/month|  
  | AWS Lambda                   |$0.0000063/day|  
 
 
@@ -103,7 +103,7 @@ The following is a checklist of all components associated with this project:
 
  - [ ] Lambda function
  - [ ] Amazon ECR
- - [ ] Amazon EventBridge
+ - [ ] Amazon Cloudwatch
  - [ ] Amazon SNS
  - [ ] Docker
  - [ ] EC2 - to setup my Docker environment in Ubuntu
