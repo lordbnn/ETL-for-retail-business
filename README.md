@@ -19,7 +19,7 @@ Data2bots Technical assessment
 [Back to top](#table-of-contents)
 
 <p align='center'>
-     <img src="figs/architecture.png"
+     <img src="figs/data2bots-architecture.jpg"
      alt='Figure 1: Completed data pipeline'
      width=1000px/>
      <br>
