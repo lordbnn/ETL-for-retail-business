@@ -38,7 +38,7 @@ The formed data pipeline exhibits the following functionality:
  - **Pipeline input:** The pipeline is capable of *ingesting and processing 3 `csv` files* per workflow run.
  - **Pipeline output:** The raw data is *stored within a PostgreSQL staging DB schema * and the resulting processed data in a postgreSQL analytics DB schema.   
  - **Monitoring:** The pipeline provides an *email-based success or failure notification* following an attempted run.  
- - **Automation:** The pipeline is *event-driven*, triggering based on a specific time. The pipeline will not be invoked more than once per day. 
+ - **Automation:** The pipeline is *event-driven*, triggering upon a file change. The pipeline will not be invoked more than once per day. 
 
 
 ## Why containerized lambda?
@@ -46,11 +46,11 @@ The formed data pipeline exhibits the following functionality:
 
 The decision of my ETL pipeline components and processes are based these major considerations:
 - ABC company would be recieving data from transactional activities on daily basis. The flux of these activities cannot be forecasted by an exact number of, for example: expected orders in a day/week/month, hence the project has to be considered as a memory intensive workload.
-- Since ABC is an E-commerce company, it is expected that reports on the activities are expected within a minimum timeline of 24 hours to get accurate state of budiness.
+- ABC requires analytics report mostly on a yearly reporting period.
 - The data is expected to rapidly grow considering the expanding plans the company would have.
 - All online activities are free
 
-Based on these considerations, ABC data pipeline would require a rapid scaling, high availability, and secured process that is invoked once a day to extract and transform their data in a very cost effective manner.
+Based on these considerations, ABC data pipeline would require a rapid scaling, high availability, and secured process that is triggered upon a file change in a monitored Amazon S3 bucket to extract and transform their data in a very cost effective manner.
 
 Lambda serverless computing offers this and more, with a highly effective autoscaling capability (from 0 to 3,000 concurrent executions in seconds) and a unique billing process that's based on just what is used and scales itself to zero when it is not used.
 The container image bolsters the agility of the lambda function by being able to accomodate larger lambda functions with a 10GB package deployment size compared to 50mb zip deployment if using just Lambda.
