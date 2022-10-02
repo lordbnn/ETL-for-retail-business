@@ -80,6 +80,9 @@ All data loading was done with with Python, using boto3 to connect to the S3 buc
 ### Transforming the data
 All transformation was done in SQL, then converted to a dataframe through Python to enable ease loading into their respective PostgreSQL tables
 
+### Automation
+Based on the analytics requirements which spans through a yearly calendar or based on a specific timeline, it is therefore recommended that the pipeline should run in a batch-wise manner upon a file change in s3 bucket. Hence whenever a .SUCCESS (emphasis on the casing) file is introduced, lambda function is invoked to run the ETL functions. This would usually take less than 2 minutes to complete.
+
 ### Challenges
 - DataType errors:
       Null values in SQL are represented by the DataType `Null`, however, pandas converts this to 'NaN', a datatype not recognized by postgreSQL, hence 
