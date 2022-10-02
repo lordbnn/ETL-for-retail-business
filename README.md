@@ -45,8 +45,8 @@ The formed data pipeline exhibits the following functionality:
 ## Why containerized lambda?
 [Back to top](#table-of-contents)
 
-The decision of my ETL pipeline components and processes are based these major considerations:
-- ABC company would be recieving data from transactional activities on daily basis. The flux of these activities cannot be forecasted by an exact number of, for example: expected orders in a day/week/month, hence the project has to be considered as a memory intensive workload.
+The decision of my ETL pipeline components and processes are based on these major considerations:
+- ABC company would be recieving data from transactional activities on daily basis. The quantity of these activities cannot be accurately forecasted, for example: expected orders in a day/week/month, hence the project has to be considered as a memory intensive workload because of it's unpredictability.
 - ABC requires analytics report mostly on a yearly reporting period.
 - The data is expected to rapidly grow considering the expanding plans the company would have.
 - All online activities are free
